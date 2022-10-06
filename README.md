@@ -1,4 +1,4 @@
-1- Install Remoteit
+#1- Install Remoteit
 
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 
