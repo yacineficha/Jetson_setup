@@ -70,6 +70,8 @@ With minicom
 killall ModemManager
 turn off the connection (4G) 
 $ sudo minicom -D /dev/ttyUSB2
+
+Ctrl + A => Z => Q
 Enter ATI
 If you can't see your local echo, you may need to enable it:
 Press ctrl+a then z to bring up the options menu.
@@ -91,7 +93,8 @@ OK
 6- Compile, and Install Driver
 
 Modify the Makefile (basically rewrite it): $ nano Makefile
-
+cd Simcom_wwan/simcom_wwan
+nano Makefile
 ____________________________
 obj-m:=simcom_wwan.o
 
