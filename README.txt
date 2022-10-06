@@ -1,5 +1,6 @@
 #1- Install Remoteit
 
+dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 
 2- start.sh
@@ -9,12 +10,14 @@ sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 4- minicom.sh
 
 5- Testing
+
 Setting up minicom
 NOTE: It's also possible (and possibly easier) to use screen. If you don't have time to deal with this, skip to the "Pure bash shell" instructions at the end of this section.
 
 At this point, the instructions provided by Waveshare call for using minicom, but don't provide any hint that it needs to be setup. Instructions for setup can be found here and are summarized below.
 
 $ sudo minicom -s will greet you with a configuration menu
+
             +-----[configuration]------+
             | Filenames and paths      |
             | File transfer protocols  |
@@ -26,8 +29,10 @@ $ sudo minicom -s will greet you with a configuration menu
             | Exit                     |
             | Exit from Minicom        |
             +--------------------------+
+
 Arrow down to Modem and Dialing and press enter
 Remove "Dialing prefix", "Dialing suffix", and "Hang-up string" entries to match:
+
  +--------------------[Modem and dialing parameter setup]---------------------+
  |                                                                            |
  | A - Init string .........                                                  |
@@ -51,6 +56,7 @@ Remove "Dialing prefix", "Dialing suffix", and "Hang-up string" entries to match
  |                                                                            |
  | Change which setting?     Return or Esc to exit. Edit A+B to get defaults. |
  +----------------------------------------------------------------------------+
+ 
 Escape to the configuration menu
 Select Screen and keyboard and press enter.
 Press q to toggle Local echo to Yes
@@ -61,6 +67,8 @@ Select Exit from Minicom and press enter
 On To Testing
 
 With minicom
+killall ModemManager
+turn off the connection (4G) 
 $ sudo minicom -D /dev/ttyUSB2
 Enter ATI
 If you can't see your local echo, you may need to enable it:
