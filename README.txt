@@ -1,6 +1,8 @@
 #1- Install Remoteit
 
 dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+
+sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 
 2- start.sh
