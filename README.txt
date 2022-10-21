@@ -1,11 +1,13 @@
 #1- Install Remoteit
-
-sudo apt-get update
-sudo apt-get install dos2unix
-dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
-
-sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
+sudo apt-get update
+sudo apt-get install ./remot...
+sudo apt-get install dos2unix
+
+git clone https://github.com/yacineficha/Jetson_setup.git
+dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+
 
 2- start.sh
 
