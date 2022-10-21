@@ -3,10 +3,25 @@
 
 # Software Setup
 
+#sudo apt-get update
+#sudo apt-get install p7zip python3-serial minicom Jetson.GPIO -y
+#wget https://www.waveshare.com/w/upload/9/9b/SIM7600X_4G_for_JETSON_NANO.7z
+#p7zip --uncompress SIM7600X_4G_for_JETSON_NANO.7z
+
+
+
 sudo apt-get update
-sudo apt-get install p7zip python3-serial minicom Jetson.GPIO -y
-wget https://www.waveshare.com/w/upload/9/9b/SIM7600X_4G_for_JETSON_NANO.7z
-p7zip --uncompress SIM7600X_4G_for_JETSON_NANO.7z
+sudo apt-get install python3-pip
+sudo pip3 install pyserial
+mkdir -p ~/Documents/SIM7600X_4G_for_JETSON_NANO
+wget -P ~/Documents/SIM7600X_4G_for_JETSON_NANO/ https://www.waveshare.com/w/upload/6/64/SIM7600X_4G_for_JETSON_NANO.tar.gz
+cd ~/Documents/SIM7600X_4G_for_JETSON_NANO/
+tar -xvf SIM7600X_4G_for_JETSON_NANO.tar.gz
+sudo pip3 install Jetson.GPIO
+sudo groupadd -f -r gpio
+sudo usermod -a -G gpio your_user_name
+sudo udevadm control --reload-rules && sudo udevadm trigger
+sudo apt-get install minicom
 
 
 #Enable the Hardware (only necessary for testing before the kernel module is installed)
