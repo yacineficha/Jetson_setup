@@ -32,6 +32,7 @@ sudo apt purge numpy
 
 sudo python3 -m pip install numpy
 
-
+sudo apt install python3-pip
+pip3 install gps
 
 #sudo chmod u+x install.sh
