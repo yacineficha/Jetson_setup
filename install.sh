@@ -18,8 +18,7 @@ python3 -m pip install ffmpeg-python
 
 #Colne git
 
-git clone https://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@github.com/Ficha-Dev/Truck-Jetson-video.git
-
+git clone https://github.com/yacineficha/Truck-code.git
 cd Truck-Jetson-video
 cp -r ./* /home/ficha/
 cd /home/ficha
