@@ -8,10 +8,17 @@ git clone https://github.com/yacineficha/Jetson_setup.git
 dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
 sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
 
+1- install.sh
+
+Cam configuration
+
+https://www.arducam.com/docs/camera-for-jetson-nano/jetson-nano-xavier-nx-configuring-the-csi-connector-w-jetson-io/
 
 2- start.sh
 
 3- stop.sh
+
+
 
 4- minicom.sh
 
