@@ -1,5 +1,7 @@
 #1- Install Remoteit
 
+sudo apt-get update
+sudo apt-get install dos2unix
 dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
 
 sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
