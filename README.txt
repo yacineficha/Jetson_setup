@@ -10,7 +10,7 @@ sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_ha
 
 1- install.sh
 
-Cam configuration
+Cam configuration Setup the PI HQ 2018 v1 camera on the jeton nano (IMX 477)
 
 https://www.arducam.com/docs/camera-for-jetson-nano/jetson-nano-xavier-nx-configuring-the-csi-connector-w-jetson-io/
 cat /etc/nv_tegra_release
