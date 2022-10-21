@@ -13,6 +13,9 @@ sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_ha
 Cam configuration
 
 https://www.arducam.com/docs/camera-for-jetson-nano/jetson-nano-xavier-nx-configuring-the-csi-connector-w-jetson-io/
+cat /etc/nv_tegra_release
+sudo /opt/nvidia/jetson-io/jetson-io.py
+
 
 2- start.sh
 
