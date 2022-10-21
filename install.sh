@@ -19,7 +19,7 @@ python3 -m pip install ffmpeg-python
 #Colne git
 
 git clone https://github.com/yacineficha/Truck-code.git
-cd Truck-Jetson-video
+cd Truck-code
 cp -r ./* /home/ficha/
 cd /home/ficha
 sudo cp run_service.service /lib/systemd/system/
