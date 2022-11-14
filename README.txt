@@ -1,5 +1,7 @@
 #1- Install Remoteit
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
+sudo wget https://downloads.remote.it/remoteit/v4.15.3/remoteit-4.15.3.arm64.deb
+
 sudo apt-get update
 sudo apt-get install ./remot...
 sudo apt-get install dos2unix
