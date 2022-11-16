@@ -23,6 +23,8 @@ cd Truck-code
 cp -r ./* /home/ficha/
 cd /home/ficha
 sudo cp run_service.service /lib/systemd/system/
+sudo cp lte_network.service /lib/systemd/system/
+
 sudo chmod 777 ./run.sh
 sudo chmod +x start_service.sh
 
