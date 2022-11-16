@@ -30,13 +30,8 @@ cat /etc/nv_tegra_release
 sudo /opt/nvidia/jetson-io/jetson-io.py
 
 
-2- start.sh
+2- minicom.sh
 
-3- stop.sh
-
-
-
-4- minicom.sh
 
 5- Testing
 
@@ -95,53 +90,22 @@ Select Exit from Minicom and press enter
 
 On To Testing
 
-With minicom
-killall ModemManager
-turn off the connection (4G) 
-$ sudo minicom -D /dev/ttyUSB2
+AT COMMANDE :
 
-Ctrl + A => Z => Q
-Enter ATI
-If you can't see your local echo, you may need to enable it:
-Press ctrl+a then z to bring up the options menu.
-Press e to enable echo
-esc to return to the console
-ATI
-
-Manufacturer: SIMCOM INCORPORATED
-Model: SIMCOM_SIM7600G-H
-Revision: SIM7600M22_V2.0
-IMEI: 868822040061788
-+GCAP: +CGSM
-
-OK
+sim ready?
+AT+CPIN?
+Network available?
+AT+COPS?
+Network quality
+AT+CSQ
+LTE Dialling
+AT+CNMP?
+AT+CNMP=?
+AT+CNMP=2 FOR Automatic mode
+AT+CNMP=38 FOR just LTE mode
 
 
-5- 4G_connection.sh
-
-6- Compile, and Install Driver
-
-Modify the Makefile (basically rewrite it): $ nano Makefile
-cd Simcom_wwan/simcom_wwan
-nano Makefile
-____________________________
-obj-m:=simcom_wwan.o
-
-obj-m:=simcom_wwan.o
-simcom_wwanmodule-objs:=module
-MAKE:=make
-PWD=$(shell pwd)
-VER=$(shell uname -r)
-KERNEL_BUILD=/lib/modules/$(VER)/build
-INSTALL_ROOT=/
-
-default:
-	$(MAKE) -C $(KERNEL_BUILD) M=$(PWD) modules
-clean:
-	$(MAKE) -C $(KERNEL_BUILD) M=$(PWD) clean
-install:
-	$(MAKE) -C $(KERNEL_BUILD) M=$(PWD) INSTALL_MOD_PATH=$(INSTALL_ROOT) modules_install
-____________________________
+AT+CREG : AT command gives information about the registration status and access technology of the serving cell.
 
 
 7- enable_hardware.sh
