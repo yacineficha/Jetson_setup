@@ -4,25 +4,14 @@
 
 #Setup Network Interface wwan0
 
-
-ifconfig wwan0
-sudo ifconfig wwan0 up
-echo -e 'AT+CNMP=2\r' > /dev/ttyUSB2
-echo -e 'AT$QCRMCALL=1,1\r' > /dev/ttyUSB2
-sudo dhclient -1 -v wwan0
-
-
-
-
-#Installing as systemd service
-
-git clone https://github.com/phillipdavidstearns/simcom_wwan-setup.git
-cd simcom_wwan-setup
-chmod +x install.sh uninstall.sh update.sh
-sudo ./install.sh
-sudo ./uninstall.sh
-git pull; sudo ./update.sh
-sudo systemctl enable simcom_wwan@wwan0.service
-sudo systemctl start simcom_wwan@wwan0.service
-sudo systemctl status simcom_wwan@wwan0.service
-
+sudo make clean
+sleep 2
+sudo make
+sleep 2
+sudo make install
+sleep 2
+#sudo make install ./simcom*.* /lib/modules/4.9.140-tegra #on the latest image release if the above fails.
+sudo depmod
+sudo modprobe -v simcom_wwan
+sudo lsmod #Check for simcom_wwan to confirm successful installation 
+sudo dmesg | grep simcom #Check kernel messages for successful installation
