@@ -1,0 +1,16 @@
+[Unit]
+Description=4G LTE Network
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=/bin/sleep 30
+ExecStart=/home/ficha/enable_hardware.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
