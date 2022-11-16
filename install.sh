@@ -19,10 +19,7 @@ python3 -m pip install ffmpeg-python
 
 #Colne git
 
-cd Jetson_setup
-dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
-sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
-cp -r ./* /home/ficha/
+
 
 cd /home/ficha
 
