@@ -1,8 +1,5 @@
 #!/bin/bash
 
-sudo su
-sudo apt update
-sudo apt upgrade
 sudo apt install python3-pip
 python3 -m pip install --upgrade pip
 sudo apt-get install nano
