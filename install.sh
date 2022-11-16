@@ -5,7 +5,8 @@ sudo apt update
 sudo apt upgrade
 sudo apt install python3-pip
 python3 -m pip install --upgrade pip
-sudo apt install nano
+sudo apt-get install nano
+sudo apt-get install dos2unix
 
 #Install ffmpeg
 
@@ -17,6 +18,13 @@ python3 -m pip install ffmpeg-python
 #sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 
 #Colne git
+
+cd Jetson_setup
+dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+cp -r ./* /home/ficha/
+
+cd /home/ficha
 
 git clone https://github.com/yacineficha/Truck-code.git
 cd Truck-code
