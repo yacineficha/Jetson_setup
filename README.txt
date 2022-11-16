@@ -1,14 +1,25 @@
 #1- Install Remoteit
-sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
-sudo wget https://downloads.remote.it/remoteit/v4.15.3/remoteit-4.15.3.arm64.deb
+
+sudo su
+
 
 sudo apt-get update
+sudo apt-get upgrade
+
+sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
+sudo wget https://downloads.remote.it/remoteit/v4.15.3/remoteit-4.15.3.arm64.deb
 sudo apt-get install ./remot...
-sudo apt-get install dos2unix
 
 git clone https://github.com/yacineficha/Jetson_setup.git
-dos2unix install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
-sudo chmod u+x install.sh start.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+cd Jetson_setup
+
+
+
+sudo apt-get install dos2unix
+dos2unix install.sh start_lte.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+sudo chmod u+x install.sh start_lte.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+cp -r ./* /home/ficha/
+
 
 1- install.sh
 
