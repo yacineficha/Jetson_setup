@@ -16,8 +16,8 @@ cd Jetson_setup
 
 
 sudo apt-get install dos2unix
-dos2unix install.sh start_lte.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
-sudo chmod u+x install.sh start_lte.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh
+dos2unix install.sh start_lte.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh enable_lte.sh
+sudo chmod u+x install.sh start_lte.sh stop.sh minicom.sh 4G_connection.sh enable_hardware.sh enable_lte.sh
 cp -r ./* /home/ficha/
 
 
