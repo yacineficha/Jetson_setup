@@ -5,7 +5,7 @@
 #Setup Network Interface wwan0
 
 
-cd simcon_wwan
+cd simcom_wwan
 sudo make clean
 sleep 2
 sudo make
