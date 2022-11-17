@@ -125,6 +125,17 @@ mmcli -m "MODEM-NUMBER"
 mmcli -i "PATH-TO-SIM" --pin="PIN" --disable-pin
 
 
+6 - Setup the APN of the modem :
+
+sudo minicom -D ttyUSB2
+
+AT+CGDCONT = 1,"IP","orange"
+
+or replace orange by apn name
+
+reboot the modem
+AT + CFUN = 1, 1
+
 
 8- To make sure the Jetson Nano loads the simcom_wwan kernel module driver:
 
