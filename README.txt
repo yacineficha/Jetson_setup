@@ -110,7 +110,21 @@ AT+CREG : AT command gives information about the registration status and access 
 
 7- enable_hardware.sh
 
-mmcli -i  /org/freedesktop/ModemManager1/SIM/0 --pin=0000 --disable-pin
+5- Disable PIN : 
+
+#list modems
+
+mmcli -L
+
+#get path to sim
+
+mmcli -m "MODEM-NUMBER"
+
+#disable PIN
+
+mmcli -i "PATH-TO-SIM" --pin="PIN" --disable-pin
+
+
 
 8- To make sure the Jetson Nano loads the simcom_wwan kernel module driver:
 
