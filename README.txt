@@ -1,7 +1,6 @@
 #1- Install Remoteit
 
 sudo su
-git clone https://github.com/yacineficha/Jetson_setup.git
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -9,6 +8,7 @@ sudo apt-get upgrade
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 sudo wget https://downloads.remote.it/remoteit/v4.15.3/remoteit-4.15.3.arm64.deb
 sudo apt-get install ./remot...
+
 
 git clone https://github.com/yacineficha/Jetson_setup.git
 cd Jetson_setup
