@@ -2,7 +2,6 @@
 #!/bin/bash
 
 
-mmcli -i  /org/freedesktop/ModemManager1/SIM/0 --pin=0000 --disable-pin
 #Setup Network Interface wwan0
 
 
