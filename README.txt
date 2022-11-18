@@ -1,7 +1,7 @@
 #1- Install Remoteit
 
 sudo su
-
+git clone https://github.com/yacineficha/Jetson_setup.git
 
 sudo apt-get update
 sudo apt-get upgrade
