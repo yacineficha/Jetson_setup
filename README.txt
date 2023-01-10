@@ -7,7 +7,7 @@ sudo apt-get upgrade
 
 sudo wget https://downloads.remote.it/remoteit/v4.14.1/remoteit-4.14.1.arm64.deb
 sudo wget https://downloads.remote.it/remoteit/v4.15.3/remoteit-4.15.3.arm64.deb
-sudo wget https://downloads.remote.it/remoteit/v4.15.3/remoteit-4.17.2.arm64.deb
+sudo wget https://downloads.remote.it/remoteit/v4.17.2/remoteit-4.17.2.arm64.deb
 sudo apt-get install ./remot...
 
 
